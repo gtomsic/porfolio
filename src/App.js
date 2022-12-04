@@ -7,6 +7,9 @@ import DotGroup from './scenes/DotGroup';
 import Landing from './scenes/Landing';
 import LineGradient from './components/LineGradient';
 import MySkills from './scenes/MySkills';
+import Projects from './scenes/Projects';
+import Testimonials from './scenes/Testimonials';
+import Contacts from './scenes/Contacts';
 
 const App = () => {
    const [selectedPage, setSelectedPage] = useState('home');
@@ -37,10 +40,22 @@ const App = () => {
                />
             )}
             <Landing setSelectedPage={setSelectedPage} />
-            <LineGradient />
          </div>
+         <LineGradient />
          <div className='w-5/6 mx-auto md:h-full'>
             <MySkills />
+         </div>
+         <LineGradient />
+         <div className='w-5/6 mx-auto'>
+            <Projects />
+         </div>
+         <LineGradient />
+         <div className='w-5/6 mx-auto'>
+            <Testimonials />
+         </div>
+         <LineGradient />
+         <div className='w-5/6 mx-auto'>
+            <Contacts />
          </div>
       </div>
    );
